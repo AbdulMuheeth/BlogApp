@@ -12,12 +12,15 @@ const HomePage = () => {
         dispatch(setSignedIn(true));
         dispatch(setUserData(response.profileObj));
     }
+    const logout = (response) => {
+        dispatch(setSignedIn(false));
+    }
 
     const isSignedIn = useSelector(selectSignedIn)// used to access the redux state useSelector
 
     return (
         <div style={{display:isSignedIn?"none" : ""}}>
-            {!isSignedIn? 
+            {!isSignedIn ? 
             
             <div className="text-light my-5 container  d-flex flex-column justify-content-center">
             <h2>Blog</h2>
