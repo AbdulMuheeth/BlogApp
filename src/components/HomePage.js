@@ -38,8 +38,8 @@ const HomePage = () => {
             )}
 
             onSuccess={login}
-            onFailure={login}
             isSignedIn={true}
+            onFailure={logout}
             cookiPolicy={"single_host_origin"} //basically stores in the local history.
             />
         </div>
